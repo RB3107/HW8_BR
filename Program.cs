@@ -211,7 +211,7 @@ void FillArray(int[,,] arr)
 
 //Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 
-int len = 4;
+/*int len = 4;
 int[,] table = new int[len, len];
 FillArraySpiral(table, len);
 PrintArray(table);
@@ -247,4 +247,4 @@ void PrintArray(int[,] array)
         }
         Console.WriteLine();
     }
-}
+}*/
