@@ -104,7 +104,7 @@ void FillArrayRandom(int[,] array)
 
 //Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 
-int rows = ReadInt("Введите количество строк: ");
+/*int rows = ReadInt("Введите количество строк: ");
 int columns = ReadInt("Введите количество столбцов: ");
 int[,] array = new int[rows, columns];
 int[,] secondArray = new int[rows, columns];
@@ -168,4 +168,44 @@ void PrintArray2D(int[,] array)
         Console.WriteLine();
     }
 }
+*/
 
+//Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+int[,,] array3D = new int[2, 2, 2];
+FillArray(array3D);
+PrintIndex(array3D);
+
+
+// Функция вывода индекса элементов 3D массива
+void PrintIndex(int[,,] arr)
+{
+    for (int i = 0; i < array3D.GetLength(0); i++)
+    {
+        for (int j = 0; j < array3D.GetLength(1); j++)
+        {
+            Console.WriteLine();
+            for (int k = 0; k < array3D.GetLength(2); k++)
+            {
+                Console.Write($"{array3D[i, j, k]}({i},{j},{k}) ");
+            }
+        }
+    }
+}
+
+// Функция заполнения 3D массива не повторяющимеся числами
+void FillArray(int[,,] arr)
+{
+    int count = 10;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            for (int k = 0; k < arr.GetLength(2); k++)
+            {
+                arr[k, i, j] += count;
+                count += 3;
+            }
+        }
+    }
+}
