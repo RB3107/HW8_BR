@@ -177,7 +177,6 @@ FillArray(array3D);
 PrintIndex(array3D);
 
 
-// Функция вывода индекса элементов 3D массива
 void PrintIndex(int[,,] arr)
 {
     for (int i = 0; i < array3D.GetLength(0); i++)
@@ -193,7 +192,6 @@ void PrintIndex(int[,,] arr)
     }
 }
 
-// Функция заполнения 3D массива не повторяющимеся числами
 void FillArray(int[,,] arr)
 {
     int count = 10;
